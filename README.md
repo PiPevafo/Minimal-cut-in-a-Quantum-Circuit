@@ -1,12 +1,14 @@
-# Minimum Cut in Quantum Circuits
+# Minimal Cut in Quantum Circuits
 
 ## Background: Minimum Cut and Entanglement
 
-In quantum information theory, the **minimum cut** in a quantum circuit serves as an upper bound for the entanglement between two subsystems. The concept of a minimal cut refers to partitioning the nodes of a graph into two disjoint subsets such that the total weight of the edges crossing the partition is minimized. When applied to quantum circuits, finding this minimal cut can give insights into the degree of entanglement present, which is crucial for understanding the circuit's information flow.
+In quantum information theory, the **minimum cut** in a quantum circuit serves as an upper bound for the entanglement between two subsystems A and B. The concept of a minimal cut refers to partitioning the circuit into two disjoint subsets such that each one contains a subsystem A and B, and the total weight of the edges (circuits lines) crossing the partition is minimized. When applied to quantum circuits, finding this minimal cut can give insights into the degree of entanglement present, which is crucial for understanding the circuit's information flow.
 
 Entanglement is a key resource in quantum computing, enabling tasks like superdense coding, quantum teleportation, and speeding up certain computations. By calculating a minimal cut, one can estimate the maximum amount of information that can be shared between two parts of a quantum system. This is particularly useful for analyzing the structure and efficiency of quantum circuits.
 
 ## Overview of the Algorithms
+
+Firstly, the minimum cut of the circuit only depends on its geoemetric characteristics (architecture), this motivates mapping the circuit to a graph that preserves the same geometry.
 
 ### 1. Modified Karger’s Algorithm
 
